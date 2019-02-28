@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RedisExample</name>
+    </assembly>
+    <members>
+        <member name="M:RedisExample.Controllers.TodoController.GetAll">
+            <summary>
+            Get All
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RedisExample.Controllers.TodoController.Add(RedisExample.Controllers.TodoController.TodoItem)">
+            <summary>
+            Add
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:RedisExample.Controllers.TodoController.Delete(System.String)">
+            <summary>
+            Remove
+            </summary>
+            <param name="to"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
