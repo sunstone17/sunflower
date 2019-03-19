@@ -11,6 +11,7 @@ namespace BasicHolder
     public struct SomeValue
     {
         public int Num;
+        public SomeClass SC;
     }
 
     public class SomeClass
@@ -22,6 +23,22 @@ namespace BasicHolder
     {
 
         public void Run()
+        {
+            SomeValue[] array = new SomeValue[100];
+
+            foreach(var i in array)
+            {
+                Console.WriteLine(i.Num);
+            }
+
+            SomeClass[] scArray = new SomeClass[10];
+            foreach(var i in scArray)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        private void Run1()
         {
             SomeClass sc1 = new SomeClass()
             {
