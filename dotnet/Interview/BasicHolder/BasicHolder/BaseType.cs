@@ -24,6 +24,15 @@ namespace BasicHolder
 
         public void Run()
         {
+            Parallel.For(1, 3, i => { Console.WriteLine(i); });
+
+
+            string s1 = "a";
+
+            string s2 = s1;
+
+            s1 = "b";//s2 is still "a"
+
             SomeValue[] array = new SomeValue[100];
 
             foreach(var i in array)
@@ -40,6 +49,7 @@ namespace BasicHolder
 
         private void Run1()
         {
+            var t = string.Empty;
             SomeClass sc1 = new SomeClass()
             {
                 Num = 10,
