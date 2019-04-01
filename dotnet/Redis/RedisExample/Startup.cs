@@ -12,6 +12,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using RedisExample.Options;
+using Services;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace RedisExample
@@ -36,6 +38,11 @@ namespace RedisExample
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
             });
+
+
+            services.Configure<RedisOption>(Configuration.GetSection(nameof(RedisOption)));
+
+            services.AddScoped(typeof(IRedisService), typeof(RedisService));
             #endregion
         }
 
