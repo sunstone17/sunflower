@@ -1,0 +1,6 @@
+import pandas as pd
+import pymongo 
+myclient = pymongo.MongoClient("mongodb://localhost:27017/") 
+mydb = myclient["TestMongoDB"] 
+mycol = mydb["TestCollection"] 
+df = pd.DataFrame(list(mycol.find()))
