@@ -4,6 +4,7 @@ You can simply convert your remote repository to bare repository (there is no wo
 
 Execute the following command in your remote repository folder:
 
-git config --bool core.bare true
+**git config --bool core.bare true**
+
 Then delete all the files except .git in that folder. And then you will be able to perform git push to the remote repository without any errors.
 
