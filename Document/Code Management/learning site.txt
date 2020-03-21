@@ -2,3 +2,4 @@ http://element-cn.eleme.io/#/zh-CN/component/quickstart
 http://mint-ui.github.io/docs/#/zh-cn2/button
 https://cn.vuejs.org/v2/guide/instance.html
 https://router.vuejs.org/zh-cn/
+代码命名规范：https://www.cnblogs.com/liqiangchn/p/12000361.html
