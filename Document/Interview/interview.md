@@ -43,9 +43,22 @@ on a.Id = b.Id and a.Name = b.Name转换成linq to sql
 4.	数据库锁：排它锁；数据库事务隔离级别
 5.	数据库性能优化
 6.	项目分库分表使用场景
+7. 查询优化
+```
+Id int,
+Username nvarchar[20], (不重复)
+Type nchar[10], (10种状态， 比如 COMM，VIP，VVIP)
+Region nchar[10],(省份)
+Money float,（比如 100.01，54.56）
+Status smallint (50种状态，比如 0，1，2，3，4)
+7.1 需求一 ，高并发下，固定4各类型查询，需要查出Id,Username，比如 Type = ‘VIP’, Region = ‘Shanghai’, Status = 15, Money > 10.10
+写出语句和索引
+7.2 需求二 ，根据用户名，需要查出Type
+写出语句和索引
+```
 ## No-SQL
 1.	Redis数据类型、击穿、雪崩、穿透理解，主备理解
-2.	其他
+2.	Redis持久化方案
 ## 常见排序算法
 1.	常用的排序：快排、归并空间和时间复杂度
 ## 其他：
